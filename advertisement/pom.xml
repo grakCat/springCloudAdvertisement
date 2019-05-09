@@ -5,7 +5,11 @@
 
     <groupId>com.stude</groupId>
     <artifactId>advertisement</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>ad-eureka</module>
+    </modules>
 
     <name>advertisement</name>
     <description>Project for Imooc Ad SpringCloud</description>
@@ -19,7 +23,7 @@
 
     <properties>
         <!-- 指定JAVA版本和springCloud版本 -->
-        <java.version>1.8</java.version>
+        <!--    <java.version>1.8</java.version>-->
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
     </properties>
 
@@ -39,17 +43,31 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-
     </dependencies>
 
-    <build>
-        <!--<plugins>-->
-            <!--<plugin>-->
-                <!--<groupId>org.springframework.boot</groupId>-->
-                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
-            <!--</plugin>-->
-        <!--</plugins>-->
-    </build>
+    <!--  定义子项目使用相同jar包时统一版本号  -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}}</version>
+                <type>pom</type>
+                <scope>import</scope><!--  只在导包的时候使用  -->
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!--  定义远程仓库  -->
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled> <!--  指定不使用快照版本  -->
+            </snapshots>
+        </repository>
+    </repositories>
 
 </project>
