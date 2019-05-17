@@ -1,0 +1,12 @@
+server:
+  port: 8083
+spring:
+  profiles: dev
+
+user:
+  monitor: config
+  jsondir: Club&config/clubConfig.json,Club1000&config/clubConfig100.json
+
+sample:
+  samplePackage: com.stude.springbootdemo.xlsx.sample
+  samplePath: resources
