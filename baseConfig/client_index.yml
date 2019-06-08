@@ -1,0 +1,10 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: client_index
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info

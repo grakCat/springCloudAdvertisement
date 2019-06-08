@@ -1,9 +1,12 @@
 server:
   port: 8102
   #http://localhost:8080/EUREKACLIENT/index  访问网站
+  
 spring:
   application:
     name: gateway
+  profiles:
+    active: dev
   cloud:
     gateway:
       discovery:

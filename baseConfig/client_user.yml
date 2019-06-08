@@ -1,0 +1,10 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: client_user
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info
