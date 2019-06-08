@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.1.16:3306/news?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: 123456
+      stat-view-servlet:
+      # 设置监控页面的登录名和登录密码
+        login-username: admin
+        login-password: admin
