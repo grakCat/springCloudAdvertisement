@@ -1,8 +1,0 @@
-{
-  "maxNum": 10012,
-  "closeOpenWaitDay": 7,
-  "minRoomCard": 1000,
-  "insteadRoomNumMax": 60,
-  "totalRoomNumMax": 100,
-  "test": true
-}
