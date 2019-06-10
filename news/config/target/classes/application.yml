@@ -1,0 +1,32 @@
+server:
+  port: 8101
+spring:
+  application:
+    name: config
+  profiles:
+      active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/grakCat/springCloudAdvertisement.git #配置git仓库地址
+          searchPaths: baseConfig #配置仓库路径
+          username: 591471019@qq.com #访问git仓库的用户名
+          password: lizhia5914ma #访问git仓库的用户密码
+      label: master #配置仓库的分支
+  rabbitmq:
+    host: 192.168.1.16
+    port: 5672
+    username: admin
+    password: admin
+    virtualHost: /
+    publisherConfirms: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,bus-refresh
