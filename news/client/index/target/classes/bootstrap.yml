@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      name: clientIndex
+      label: master
+      discovery:
+        enabled: true
+        serviceId: config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+
+#curl -X POST  http://localhost:8763/actuator/refresh 使用cmd模仿post刷新

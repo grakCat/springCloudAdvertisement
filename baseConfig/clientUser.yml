@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+server:
+  port: 8081
+spring:
+  application:
+    name: clientUser
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,bus-refresh
