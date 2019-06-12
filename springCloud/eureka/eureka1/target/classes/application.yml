@@ -1,0 +1,13 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8763/eureka/
+    register-with-eureka: false  #�����Լ�ע�ᵽclient��
+  server:
+    # ���ұ������ƣ�һ�����񿪹�̫��Ƶ����ע�����ľ�һ��ʱ����ֱ����Ϊ�����ڵģ��������������ó�false��ʵ�ʻ���Ҫ�򿪣�����ֹ����ҵ���ע�ỹ��
+    enable-self-preservation: false
+spring:
+  application:
+    name: eureka
+server:
+  port: 8762

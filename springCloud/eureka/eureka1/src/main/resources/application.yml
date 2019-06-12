@@ -1,0 +1,13 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8763/eureka/
+    register-with-eureka: false  #不把自己注册到client上
+  server:
+    # 自我保护机制，一个服务开关太过频繁，注册中心就一段时间内直接认为你是在的，开发环境下设置成false（实际环境要打开），防止服务挂掉，注册还在
+    enable-self-preservation: false
+spring:
+  application:
+    name: eureka
+server:
+  port: 8762

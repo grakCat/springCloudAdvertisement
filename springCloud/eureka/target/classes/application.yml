@@ -1,0 +1,26 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: false  #不把自己注册到client上
+  server:
+    # 自我保护机制，一个服务开关太过频繁，注册中心就一段时间内直接认为你是在的，开发环境下设置成false（实际环境要打开），防止服务挂掉，注册还在
+    enable-self-preservation: false
+spring:
+  application:
+    name: eureka
+server:
+  port: 8761
+
+#  eureka.server.enable-self-preservation：是否开启自我保护
+#  会进入自动保护模式，注册中心并不会将该服务从注册中心删除掉。设置成false
+#  eureka.instance.prefer-ip-address：true 是否以 IP 注册到注册中心
+#  eureka.instance.instance-id：注册限制的实例 ID，即上图显示的 127.0.0.1:8761
+#  eureka.instance.hostname 来修改 hostname 的值,Eureka 默认是以 hostname
+#
+#  client.serviceUrl.defaultZone：注册中心默认地址。
+#  eureka.server.peer-node-read-timeout-ms：微服务节点连接超时时间。
+#
+#  eureka.client.register-with-eureka: false 是否向服务端注册自己
+#  eureka.client.false.fetch-registry: false 表示是否从Eureka Server获取信息
+
