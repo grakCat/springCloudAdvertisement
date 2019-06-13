@@ -13,4 +13,6 @@ import java.util.List;
 public interface ProductService {
 
     List<ProductInfo> findByProductStatus(Integer productStatus);
+
+    List<ProductInfo> findUpAll();
 }

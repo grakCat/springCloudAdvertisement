@@ -28,4 +28,10 @@ public class ProductServiceImplTest {
         List<ProductInfo> productInfos = productService.findByProductStatus(0);
         Assert.assertTrue(productInfos.size() > 0);
     }
+
+    @Test
+    public void findUpAll() {
+        List<ProductInfo> productInfos = productService.findUpAll();
+        Assert.assertTrue(productInfos.size() > 0);
+    }
 }

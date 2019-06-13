@@ -26,7 +26,7 @@ public class CategoryServiceImplTest {
 
     @Test
     public void findByCategoryTypeIn() {
-        List<ProductCategory> categories = categoryService.findByCategoryTypeIn(Arrays.asList(11,22));
+        List<ProductCategory> categories = categoryService.findByCategoryTypeIn(Arrays.asList(1,2));
         Assert.assertTrue(categories.size() > 0);
     }
 }
